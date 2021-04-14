@@ -19,7 +19,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jpg$/i,
+                test: /\.(png|jpg)$/i,
                 use: [
                     {
                         loader: 'file-loader',
@@ -39,9 +39,6 @@ module.exports = {
             }
         ]
     },
-    // default is producion mode
-    // development mode will minify code automatically
-    mode: 'development',
     plugins: [
         new webpack.ProvidePlugin({
             $: 'jquery',
@@ -65,5 +62,8 @@ module.exports = {
                 destination: path.join("assets", "icons")
             }]
         })
-    ]
+    ],
+    // default is producion mode
+    // development mode will minify code automatically
+    mode: "development"
 }
