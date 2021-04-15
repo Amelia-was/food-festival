@@ -166,18 +166,20 @@
       </div>        
       <div class="footer-copyright text-center py-3 text-white">© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.</div>        
     </footer>
-</body>
 
-<script>
-(function() {
-  // navigator is browser
-  // IIFE = Immediately Invoked Function Expression
-  if("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("./service-worker.js") // register service worker
-      .then(() => console.log("Service Worker registered successfully."))
-      .catch(error => console.log("Service Worker registration failed:", error));
-  }
-})();
-</script>
+    <script>
+      // phil says put this inside body, canvas says put it after
+      (function () {
+        // navigator is browser
+        // IIFE = Immediately Invoked Function Expression
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("./service-worker.js") // register service worker
+            .then(() => console.log("Service Worker registered successfully."))
+            .catch(error => console.log("Service Worker registration failed:", error));
+        }
+      })();
+    </script>
+    
+</body>
 
 </html>
